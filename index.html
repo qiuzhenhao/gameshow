@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>dome</title>
+    <link rel="stylesheet" href="css/amazeui.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <style>
+        body{
+            /*background-color: #171b3a;*/
+            margin: 0;
+            padding: 0;
+            background-color: #171b3a;
+        }
+        ul li{
+            list-style-type: none;
+        }
+        .nav{cursor:pointer}
+        .nav-nochange{cursor:pointer}
+        .topbar-brand span{cursor:pointer}
+        .login-regis-button span{cursor:pointer}
+
+        .topbar{
+            background-color: #0b0d1d;
+            width: 100%;
+            height: 100px;
+        }
+        .topbar-set{
+            width: 64%;
+            height: 100%;
+            margin-left: 18%;
+            font-size: 20px;
+            font-weight: 500;
+            color:#fff;
+
+        }
+        .topbar-set .topbar-brand{
+            padding-top: 20px;
+            font-size: 40px;
+        }
+        .topbar-set .login-regis-button{
+            padding-top: 30px;
+            text-align: center;
+        }
+        .topbar-set .login-set{
+            margin-right: 20px;
+        }
+        .topbar-set .topbar-list .nav-nochange .nav-li{
+            border-bottom: 3px solid #37b4dd;
+            padding: 30px 25px 0 25px;
+            height: 100px;
+            text-align: center;
+            float: left;
+            position: relative;
+        }
+        .topbar-set .topbar-list .nav-nochange .nav-li .remark{
+            font-size: 12px;
+            color: #37b4dd;
+        }
+        .topbar-set .topbar-list .nav .nav-li{
+            padding: 30px 25px 0 25px;
+            height: 100px;
+            text-align: center;
+            float: left;
+            position: relative;
+        }
+        .topbar-set .topbar-list .nav .nav-li .title{
+            color:#999;
+        }
+        .topbar-set .topbar-list .nav .nav-li .remark{
+            font-size: 12px;
+            color: #266378;
+        }
+        .topbar-set .topbar-list .nav .nav-li .select-dropdown{
+            position: absolute;
+            top: 103%;
+            left: 0px;
+            display: none;
+            font-size: 16px;
+            z-index: 999;
+        }
+        .topbar-set .topbar-list .nav .nav-li .select-dropdown .select-dropdown-content div{
+            padding: 10px 0px 10px 0px;
+            width: 100%;
+            background-color: #000000;
+            color: #07befa;
+            opacity:0.8;
+            filter:Alpha(opacity=80);
+        }
+        .content{
+            background-image: url("image/content-background.jpg");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-set am-g">
+            <div class="am-u-lg-2 am-u-sm-3 topbar-brand"><span>GAME</span></div>
+            <div class="am-u-lg-8 am-u-sm-6 topbar-list">
+                <div class="nav-nochange">
+                    <div class="nav-li">
+                        <div>首页</div>
+                        <div class="remark">HOME</div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="nav-li">
+                        <div class="title">赛事中心</div>
+                        <div class="remark">MATCH</div>
+                        <div class="select-dropdown">
+                            <div class="select-dropdown-content">
+                                <div>新闻中心</div>
+                                <div>视屏中心</div>
+                                <div>赛场映像</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="nav-li">
+                        <div class="title">赛事规则</div>
+                        <div class="remark">RULE</div>
+                        <div class="select-dropdown">
+                            <div class="select-dropdown-content">
+                                <div>报名须知</div>
+                                <div>相关守则</div>
+                                <div>比赛细则</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="nav-li">
+                        <div class="title">快速报名</div>
+                        <div class="remark">REGUISTRATION</div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="nav-li">
+                        <div class="title">关于我们</div>
+                        <div class="remark">ABOUT</div>
+                    </div>
+                </div>
+            </div>
+            <div class="am-u-lg-2 am-u-sm-3 login-regis-button">
+                <span class="login-set">登陆</span>
+                <span class="regis-set">注册</span>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="image/banner.jpg"></div>
+            <div class="swiper-slide"><img src="image/revive_banner.jpg"></div>
+            <div class="swiper-slide"><img src="image/rts_banner.jpg"></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="">
+        <
+
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/amazeui.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/vue-resource.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".nav").hover(function(){
+                $(this).children(".nav-li").css("border-bottom","3px solid #37b4dd");
+                $(this).children(".nav-li").children("div").removeClass("title");
+                $(this).children(".nav-li").children(".remark").css("color","#37b4dd");
+                $(this).children(".nav-li").children(".select-dropdown").css("display", "block");
+                var dropdownWidth = $(this).children(".nav-li").width()+ 50 +"px";
+                $(this).children(".nav-li").children(".select-dropdown").children("div").css("width", dropdownWidth);
+            },function(){
+                $(this).children(".nav-li").css("border-bottom", "");
+                $(this).children(".nav-li").children("div").addClass("title");
+                $(this).children(".nav-li").children(".remark").css("color","#266378");
+                $(this).children(".nav-li").children(".select-dropdown").css("display", "none");
+            });
+            $(".select-dropdown-content div").hover(function(){
+                $(this).css("opacity", "0.6")
+            },function(){
+                $(this).css("opacity", "0.8")
+            });
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal', // 水平切换选项
+                width : window.innerWidth,
+                autoplay: true,
+                loop : true,
+                speed: 1000,
+                effect : 'fade',
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                fade: {
+                    crossFade: false,
+                },
+                autoplay: {
+                    delay: 5000,//1秒切换一次
+                    disableOnInteraction: false,
+                },
+
+            })
+        });
+
+    </script>
+</body>
+</html>
