@@ -88,13 +88,64 @@
             opacity:0.8;
             filter:Alpha(opacity=80);
         }
-        .content{
+        .content-background{
             background-image: url("image/content-background.jpg");
             background-repeat: no-repeat;
             width: 100%;
             height: 100%;
         }
+        .content{
+            width: 64%;
+            margin-left: 20%;
 
+        }
+        .content .first-set{
+            width: 100%;
+            height: 100%;
+            padding-left: 5%;
+            padding-top: 30px;
+        }
+        .content .first-set img{
+            width: 90%;
+        }
+        .content .second-set{
+            width: 100%;
+            height: 100%;
+            margin-top: 30px;
+            text-align: center;
+            display: block;
+        }
+        .content .second-set .no-words{
+            width: 100%;
+            display: block;
+        }
+        .content .second-set .picture{
+            width: 20%;
+            /*display: inline;*/
+            float: left;
+            border: none;
+            display: block;
+        }
+
+        .content .second-set .picture img{
+            width: 100%;
+            height: 100%;
+        }
+        .content .second-set .bg-line{
+            width: 6.6%;
+            float: left;
+            border: none;
+            display: block;
+        }
+        .content .second-set .bg-line img{
+            height: 340px;
+        }
+        .content .second-set .words{
+            font-size: 24px;
+            color: #ccc;
+            margin-top: 15px;
+            margin-bottom: 40px;
+        }
     </style>
 </head>
 <body>
@@ -162,9 +213,31 @@
         <!-- 如果需要分页器 -->
         <div class="swiper-pagination"></div>
     </div>
-    <div class="">
-        <
+    <div class="content-background">
+        <div class="content">
+            <div class="first-set">
+                 <img src="image/timeline-2.png">
+            </div>
+            <div class="second-set">
+                <div class="no-words">
+                    <div class="picture"><img src="image/gaming.png"></div>
+                    <div class="bg-line"><img src="image/bg-bm.png"></div>
+                    <div class="picture"><img src="image/revive.png"></div>
+                    <div class="bg-line"><img src="image/bg-bm.png"></div>
+                    <div class="picture"><img src="image/denon.png"></div>
+                    <div class="bg-line"><img src="image/bg-bm.png"></div>
+                    <div class="picture"><img src="image/cos.png"></div>
+                </div>
 
+                <p class="words">请先注册登录再报名</p>
+            </div>
+            <div class="third-set">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/amazeui.js"></script>
@@ -191,6 +264,8 @@
             },function(){
                 $(this).css("opacity", "0.8")
             });
+
+            $(".no-words").css("height", $(".second-set").children('.no-words').children('.picture').height())
             var mySwiper = new Swiper ('.swiper-container', {
                 direction: 'horizontal', // 水平切换选项
                 width : window.innerWidth,
@@ -209,7 +284,6 @@
                     delay: 5000,//1秒切换一次
                     disableOnInteraction: false,
                 },
-
             })
         });
 
