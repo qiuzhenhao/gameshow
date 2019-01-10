@@ -4548,7 +4548,7 @@ a.am-badge:focus {
   display: inline-block;
   text-align: center;
   width: 24px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   line-height: 24px;
   color: #000;
@@ -4556,6 +4556,7 @@ a.am-badge:focus {
   opacity: .2;
   -webkit-transition: all .3s;
   transition: all .3s;
+  margin-top: 15px;
 }
 .am-close:hover,
 .am-close:focus {
@@ -9081,13 +9082,15 @@ TODO:
 }
 @media only screen and (min-width:641px) {
   .am-modal-dialog {
-    width: 540px;
+    width: 450px;
   }
 }
 .am-modal-hd {
   padding: 15px 10px 5px 10px;
   font-size: 1.8rem;
   font-weight: 500;
+  border-bottom: 1px solid #dedede;
+  background: #f5f3f2;
 }
 .am-modal-hd + .am-modal-bd {
   padding-top: 0;
@@ -14557,4 +14560,42 @@ tbody.am-collapse.am-in {
 .am-wechatpay .am-wechatpay-btn {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.font-Violet{
+  color: #942da7!important;
+}
+.font-green {
+  color: #32c5d2!important;
+}
+.font-red {
+  color: #e7505a!important;
+}
+.font-blue {
+  color: #23abf0 !important;
+}
+.font-yellow {
+  color: #f9c851 !important;
+}
+.font-yellow-light{
+  color:#ffd659 !important;
+}
+.font-green-light {
+  color: #1afa29 !important;
+}
+.font-gray {
+  color: #848484 !important;
+}
+.font-gray-light {
+  color: #A3A3A3 !important;
+}
+.font-gray-heavy{
+  color: #3c3c3b !important;
+}
+.font-white-before:before {
+  color: white !important;
+  margin-right: 5px;
+}
+.font-deep-green{
+  color: #09BB07 !important;
 }
